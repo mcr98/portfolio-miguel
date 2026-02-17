@@ -75,7 +75,6 @@ body.dark .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 var(--container-px);
     max-width: var(--container-max);
     margin: 0 auto;
 }
@@ -118,8 +117,10 @@ main > section + section {
     margin-top: 7rem;
 }
 .container {
-    width: min(var(--container-max), 90%);
-    margin: auto;
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding-inline: var(--container-px);
 }
 
 .hero-grid {
@@ -132,8 +133,9 @@ main > section + section {
 .avatar-wrapper {
     position: relative;
     margin-left: auto;
-    width: 550px;
-    height: 550px;
+    width: min(550px, 100%);
+    aspect-ratio: 1/1;
+    height: auto;
     border-radius: var(--radius-2xl);
     overflow: hidden;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
@@ -221,7 +223,7 @@ body.light .project-cards {
 }
 
 .title {
-    font-size: clamp(3rem, 4.5vw, 5rem);;
+    font-size: clamp(2.4rem, 7vw, 5rem);
     line-height: 1.1;
     font-weight: 800;
 }
@@ -236,7 +238,7 @@ body.light .project-cards {
 }
 
 .description {
-    font-size: clamp(1rem, 2vw, 1.50rem);
+    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
     line-height: 1.6;
     font-weight: 400;
     max-width: 600px;
@@ -514,7 +516,6 @@ body.dark .tech-tags li {
     align-items: center;
     gap: 2rem;
     opacity: .85;
-    padding: 0 var(--container-px);
 }
 
 .footer-copy {
@@ -566,7 +567,8 @@ body.dark .tech-tags li {
     display: inline-block;
     width: 3.5em;
     height: 2em;
-    margin-right: 2rem;
+    margin-right: 0;
+    flex-shrink: 0;
 }
 
 .switch input {
