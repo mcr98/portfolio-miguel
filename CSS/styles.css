@@ -36,7 +36,6 @@ body {
     font-family: "Manrope", system-ui, sans-serif;
     background: var(--bg-light);
     color: var(--text-light);
-    /* Restaurar diseño de puntos */
     background-image: radial-gradient(rgba(0,0,0,0.08) 1px, transparent 1px);
     background-size: 22px 22px;
     transition: background .3s, color .3s;
@@ -229,7 +228,7 @@ body.light .project-cards {
 }
 
 .strong {
-    font-weight: inherit;
+    font-weight: 700;
     line-height: inherit;
     background: linear-gradient(90deg, var(--primary), #a78bfa);
     background-clip: text;
@@ -614,7 +613,7 @@ input:checked+.slider:before {
 
 /* ===================== Responsive Navbar ===================== */
 
-/* --- Mobile-first Hamburger Menu Overlay & Menu --- */
+/* --- Hamburger Menu Overlay & Menu --- */
 @media (max-width: 900px) {
     .navbar {
         justify-content: flex-end;
@@ -705,7 +704,6 @@ input:checked+.slider:before {
     .navbar.open .hamburger-menu .line:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
-    /* Bloquea el scroll del body cuando el menú está abierto */
     body.menu-open {
         overflow: hidden;
         touch-action: none;
