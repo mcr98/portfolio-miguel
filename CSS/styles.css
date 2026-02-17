@@ -204,7 +204,7 @@ body.dark .rgb-inner {
 }
 
 
-/*Cards----------------------------------------------*/
+/*Cards---------------------------------------------*/
 .project-cards {
     background: var(--glass);
     backdrop-filter: blur(6px);
